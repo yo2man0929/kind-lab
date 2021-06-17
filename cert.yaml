@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: test-crt
+spec:
+  secretName: test-crt-vh4z7
+  dnsNames:
+  - myservicea.foo.org
+  issuerRef:
+    name: my-selfsigned-ca
+    # We can reference ClusterIssuers by changing the kind here.
+    # The default value is Issuer (i.e. a locally namespaced Issuer)
+    kind: Issuer
