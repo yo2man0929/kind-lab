@@ -1,5 +1,10 @@
 # kind-lab
-This repo is a playground for testing the function within k8s.
+## Prerequisite
+
+* Install helm, docker, kubectl for before running the scripts!
+
+
+## This repo is a playground for testing the function within k8s.
 
 1. Create a file named monitor.env
 2. Put your slack in a format like below
