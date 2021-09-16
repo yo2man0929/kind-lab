@@ -43,5 +43,6 @@ grafna password admin/admin
 `kind delete cluster`
 
 
-####
+#### self-test scirpt
+bash build-test.sh
 
