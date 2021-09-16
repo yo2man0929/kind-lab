@@ -44,5 +44,5 @@ grafna password admin/admin
 
 
 #### self-test scirpt
-bash build-test.sh
+`bash build-test.sh`
 
