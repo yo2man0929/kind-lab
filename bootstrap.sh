@@ -1,6 +1,6 @@
 #! /bin/bash
 set -euo pipefail
-[[ $(docker images nginx:dev | wc -l) -ge 2 ]] || docker build . -t nginx:dev
+docker build . -t nginx:dev
 
 # set up kind cluster
 kind create cluster --wait 10m --config kind-config/kind-ingress-config.yaml
@@ -19,6 +19,8 @@ kubectl wait --namespace ingress-nginx \
 
 # install monitoring using ensubst to render variables
 bash kube-prometheus-stack-values.yaml.sh > kube-prometheus-stack-values.yaml 
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
 helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack -f kube-prometheus-stack-values.yaml 
 rm -rf kube-prometheus-stack-values.yaml &> /dev/null
 

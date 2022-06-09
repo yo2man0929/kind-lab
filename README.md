@@ -4,6 +4,7 @@
 
 #### Install helm, docker, kubectl, envsbst before running the bootstrap scripts!
 
+For mac
 ```
 brew install gettext kubernetes-helm
 
@@ -12,6 +13,8 @@ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stabl
 brew link --force gettext
 
 ```
+
+
 
 ## This repo is a playground for testing the function of k8s with helm chart  *_kube-prometheus-stack_*
 
