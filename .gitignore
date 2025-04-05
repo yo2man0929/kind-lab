@@ -1,1 +1,25 @@
+# Environment and secrets
 *.env
+.env*
+secrets.yaml
+
+# Generated config files
+kube-prometheus-stack-values.yaml
+
+# OS specific files
+.DS_Store
+Thumbs.db
+*~
+
+# IDE and editor specific
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
